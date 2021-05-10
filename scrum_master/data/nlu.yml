@@ -1,92 +1,33 @@
 version: "2.0"
 
 nlu:
-- intent: greet
+- intent: pregunta_trabajo_ayer
   examples: |
-    - hey
-    - hello
-    - hi
-    - hello there
-    - good morning
-    - good evening
-    - moin
-    - hey there
-    - let's go
-    - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
+    - Que tarea hiciste ayer ?
+    - Que hiciste ayer ?
+    - Pudiste avanzar con tu trabajo ayer ?
+    - Lograste completar tu tarea el dia de ayer ?
+    - Ayer avanzaste con tu trabajo ?
 
-- intent: goodbye
+- intent: pregunta_que_hace_hoy
   examples: |
-    - good afternoon
-    - cu
-    - good by
-    - cee you later
-    - good night
-    - bye
-    - goodbye
-    - have a nice day
-    - see you around
-    - bye bye
-    - see you later
+    - Hoy que tarea vas a hacer ?
+    - Que tarea tenes hoy ?
+    - Que trabajo estas realizando ahora ?
+    - Cual tarea estas haciendo actualmente ?
 
-- intent: affirm
-  examples: |
-    - yes
-    - y
-    - indeed
-    - of course
-    - that sounds good
-    - correct
 
-- intent: deny
+- intent: pregunta_por_problemas
   examples: |
-    - no
-    - n
-    - never
-    - I don't think so
-    - don't like that
-    - no way
-    - not really
+    - Que inconvenientes tenes ?
+    - Que problemas estás teniendo ?
+    - Estas teniendo algún problema ?
+    - Te encontraste con alguna dificultad ?
 
-- intent: mood_great
+- intent: pregunta_demora_implementacion_func
   examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
-
-- intent: mood_unhappy
-  examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
-
-- intent: bot_challenge
-  examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
+    - Cuanto te vas a tardar en terminar la tarea ?
+    - Queda mucho para la finalización de la implementación de tu task ?
+    - falta mucho para terminar tu tarea ?
+    - te falta para terminar tu trabajo ?
+    - te queda mucho tiempo para terminar ? 
