@@ -1,33 +1,13 @@
 version: "2.0"
 
 nlu:
-- intent: pregunta_trabajo_ayer
+- intent: preguntan_por_horario
   examples: |
-    - Que tarea hiciste ayer ?
-    - Que hiciste ayer ?
-    - Pudiste avanzar con tu trabajo ayer ?
-    - Lograste completar tu tarea el dia de ayer ?
-    - Ayer avanzaste con tu trabajo ?
-
-- intent: pregunta_que_hace_hoy
-  examples: |
-    - Hoy que tarea vas a hacer ?
-    - Que tarea tenes hoy ?
-    - Que trabajo estas realizando ahora ?
-    - Cual tarea estas haciendo actualmente ?
+    - A que hora era el (daily meeting)[ScrumEvent] ?
+    - En que horario es el (retrospective)[ScrumEvent] ?
+    - Me podes decir a que hora es el (sprint retrospective)[ScrumEvent]
+    - Que horario es la (daily)[ScrumEvent] ?
+    - Decime la hora del (review)[ScrumEvent] 
+    - A que hora es el (sprint review)[ScrumEvent]
 
 
-- intent: pregunta_por_problemas
-  examples: |
-    - Que inconvenientes tenes ?
-    - Que problemas estás teniendo ?
-    - Estas teniendo algún problema ?
-    - Te encontraste con alguna dificultad ?
-
-- intent: pregunta_demora_implementacion_func
-  examples: |
-    - Cuanto te vas a tardar en terminar la tarea ?
-    - Queda mucho para la finalización de la implementación de tu task ?
-    - falta mucho para terminar tu tarea ?
-    - te falta para terminar tu trabajo ?
-    - te queda mucho tiempo para terminar ? 

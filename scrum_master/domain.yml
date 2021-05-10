@@ -1,11 +1,19 @@
 version: "2.0"
 
 intents:
-  - greet
+  - preguntan_por_horario
 
 responses:
   utter_greet:
   - text: "Hey! How are you?"
+  utter_pregunta_trabajo_ayer:
+  - text: "Que tarea hiciste ayer ?"
+  utter_pregunta_que_hace_hoy:
+  - text: "Hoy que tarea vas a hacer ?"
+  utter_pregunta_por_problemas:
+  - text: "Que inconvenientes tenes ?"
+  utter_pregunta_demora_implementacion_func:
+  - text: "Cuanto te vas a tardar en terminar la tarea ?"
 
 session_config:
   session_expiration_time: 60
