@@ -2,29 +2,24 @@ version: "2.0"
 
 stories:
 
-- story: happy path
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
+- story: tarea_terminada
+  steps: 
+  - intent: saludar
+  - action: utter_saludo 
+  - intent: preguntan_por_tarea
+  - action: action_tarea_terminada
 
-- story: sad path 1
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
+- story: scrum_master_enojado
+  steps: 
+  - intent: detectar_enojo
+  - action: utter_aceptar_error
+  - intent: pregunta_por_inconvenientes
+  - action: action_inconveniente 
 
-- story: sad path 2
+- story: scrum_master_satisfecho
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: deny
-  - action: utter_goodbye
+  - intent: pregunta_tarea_nueva
+  - action: action_nueva_tarea
+  - action: utter_preguntar_horario_evento
+  - intent: reconocer_horario
+  - action: action_confirmar_asistencia
