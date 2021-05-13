@@ -13,15 +13,42 @@
 # from rasa_sdk.executor import CollectingDispatcher
 #
 #
-# class ActionHelloWorld(Action):
-#
-#     def name(self) -> Text:
-#         return "action_hello_world"
-#
-#     def run(self, dispatcher: CollectingDispatcher,
-#             tracker: Tracker,
-#             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-#
-#         dispatcher.utter_message(text="Hello World!")
-#
-#         return []
+ class action_estado_tarea_actual(Action):
+
+     def name(self) -> Text:
+         return "action_estado_tarea_actual"
+
+     def run(self, dispatcher: CollectingDispatcher,
+             tracker: Tracker,
+             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+             
+#         dispatcher.utter_message("utter_tarea_no_terminada")
+         dispatcher.utter_message("utter_tarea_terminada")
+
+         return []
+
+ class action_nueva_tarea(Action):
+
+     def name(self) -> Text:
+         return "action_nueva_tarea"
+
+     def run(self, dispatcher: CollectingDispatcher,
+             tracker: Tracker,
+             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+             
+         dispatcher.utter_message(text="la tarea 1")
+
+         return []
+
+ class action_confirmar_asistencia(Action):
+
+     def name(self) -> Text:
+         return "action_confirmar_asistencia"
+
+     def run(self, dispatcher: CollectingDispatcher,
+             tracker: Tracker,
+             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        hora = tracker.get_slot("horario")
+        dispatcher.utter_message(text="la tarea 1")
+
+        return []

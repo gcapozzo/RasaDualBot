@@ -1,27 +1,25 @@
 version: "2.0"
 
 intents:
-  - greet
-  - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
+  - preguntan_por_tarea
+  - preguntan_por_inconvenientes
+  - pregunta_demora
+  - pregunta_tarea_nueva
+
+entities:
 
 responses:
-  utter_greet:
-  - text: "Hey! How are you?"
+  utter_preguntan_por_tarea:
+  - text: ""
 
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
+  utter_preguntan_por_inconvenientes:
+  - text: ""
 
-  utter_did_that_help:
-  - text: "Did that help you?"
+  utter_pregunta_demora:
+  - text: ""
 
-  utter_happy:
-  - text: "Great, carry on!"
+  utter_pregunta_tarea_nueva:
+  - text: ""
 
   utter_goodbye:
   - text: "Bye"
