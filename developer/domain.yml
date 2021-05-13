@@ -5,25 +5,21 @@ intents:
   - preguntan_por_inconvenientes
   - pregunta_demora
   - pregunta_tarea_nueva
+  - detectar_enojo
+  - reconocer_horario
+  - saludar
 
-entities:
+actions:
+  - action_inconveniente
+  - action_confirmar_asistencia
+  - action_nueva_tarea
+  - action_estado_tarea_actual
 
 responses:
-  utter_preguntan_por_tarea:
-  - text: ""
-
-  utter_preguntan_por_inconvenientes:
-  - text: ""
-
-  utter_pregunta_demora:
-  - text: ""
-
-  utter_pregunta_tarea_nueva:
-  - text: ""
-
-  utter_goodbye:
-  - text: "Bye"
-
+  utter_saludar:
+  - text: "Hola"
+  utter_aceptar_error:
+  - text: "No maneje bien mis tiempos"
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
 

@@ -5,6 +5,11 @@ nlu:
   examples: |
     - ^([01]?[0-9]|2[0-3]):[0-5][0-9]$
 
+- intent: detectar_enojo
+  examples: |
+    - inutil
+    - tonto
+
 - intent: preguntan_por_tarea
   examples: |
     - que tarea hiciste ?
@@ -27,17 +32,17 @@ nlu:
     - cuanto tiempo demoras con la tarea ?
 
 - intent: pregunta_tarea_nueva
-  example: |
+  examples: |
     - cual tarea vas a empezar ? 
     - ahora que tarea vas a hacer ?
     - que vas a empezar hoy ?
 
 - intent: reconocer_horario
-  example: |
-    - cual tarea vas a empezar ? 
-    - ahora que tarea vas a hacer ?
-    - que vas a empezar hoy ?
+  examples: |
+    - son las
+    - es a las
 
 - intent: saludar
-  example: |
-  - hola
+  examples: |
+    - hola
+    - hey

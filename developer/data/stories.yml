@@ -5,21 +5,21 @@ stories:
 - story: tarea_terminada
   steps: 
   - intent: saludar
-  - action: utter_saludo 
+  - action: utter_saludar 
   - intent: preguntan_por_tarea
-  - action: action_tarea_terminada
+  - action: action_estado_tarea_actual
 
 - story: scrum_master_enojado
   steps: 
   - intent: detectar_enojo
   - action: utter_aceptar_error
-  - intent: pregunta_por_inconvenientes
+  - intent: preguntan_por_inconvenientes
   - action: action_inconveniente 
 
-- story: scrum_master_satisfecho
-  steps:
-  - intent: pregunta_tarea_nueva
-  - action: action_nueva_tarea
-  - action: utter_preguntar_horario_evento
-  - intent: reconocer_horario
-  - action: action_confirmar_asistencia
+#- story: scrum_master_satisfecho
+#  steps:
+#  - intent: pregunta_tarea_nueva
+#  - action: action_nueva_tarea
+#  - action: utter_preguntar_horario_evento
+#  - intent: reconocer_horario
+#  - action: action_confirmar_asistencia

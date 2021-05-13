@@ -7,13 +7,13 @@
 
 # This is a simple example for a custom action which utters "Hello World!"
 
-# from typing import Any, Text, Dict, List
-#
-# from rasa_sdk import Action, Tracker
-# from rasa_sdk.executor import CollectingDispatcher
-#
-#
- class action_estado_tarea_actual(Action):
+from typing import Any, Text, Dict, List
+
+from rasa_sdk import Action, Tracker
+from rasa_sdk.executor import CollectingDispatcher
+
+
+class action_estado_tarea_actual(Action):
 
      def name(self) -> Text:
          return "action_estado_tarea_actual"
@@ -22,12 +22,12 @@
              tracker: Tracker,
              domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
              
-#         dispatcher.utter_message("utter_tarea_no_terminada")
-         dispatcher.utter_message("utter_tarea_terminada")
+         dispatcher.utter_message("utter_tarea_no_terminada")
+#         dispatcher.utter_message("utter_tarea_terminada")
 
          return []
 
- class action_nueva_tarea(Action):
+class action_nueva_tarea(Action):
 
      def name(self) -> Text:
          return "action_nueva_tarea"
@@ -40,7 +40,7 @@
 
          return []
 
- class action_confirmar_asistencia(Action):
+class action_confirmar_asistencia(Action):
 
      def name(self) -> Text:
          return "action_confirmar_asistencia"
@@ -50,5 +50,17 @@
              domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         hora = tracker.get_slot("horario")
         dispatcher.utter_message(text="la tarea 1")
+
+        return []
+
+class action_confirmar_asistencia(Action):
+
+     def name(self) -> Text:
+         return "action_inconveniente"
+
+     def run(self, dispatcher: CollectingDispatcher,
+             tracker: Tracker,
+             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        dispatcher.utter_message(text="no se manejar bd")
 
         return []
