@@ -1,6 +1,14 @@
 version: "2.0"
 
 nlu:
+- intent: acepta_reganio
+  examples: |
+    - no maneje bien mis tiempos
+  
+- intent: error desarrollo
+  examples: |
+    - no sabia manejar bd
+
 - intent: preguntan_por_horario
   examples: |
     - A que hora era el (daily meeting)[ScrumEvent] ?

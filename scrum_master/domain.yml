@@ -1,6 +1,9 @@
 version: "2.0"
 
 intents:
+  - acepta_reganio
+  - saludar
+  - error_desarrollo
   - preguntan_por_horario
   - preguntan_por_lugar_evento
   - termina_tarea
@@ -10,10 +13,14 @@ entities:
   - ScrumEvent
 
 responses:
-  utter_saluda:
-  - text: "Hola"
+  utter_despedir:
+  - text: "Chau"
+  utter_estado_tarea:
+  - text: "¿Cual es el estado de tu tarea?"
+  utter_enojo_por_tarea:
+  - text: "inutil"
   utter_pregunta_trabajo_ayer:
-  - text: "Que tarea hiciste ayer ?"
+  - text: "Que tarea hiciste ayer?"
   utter_pregunta_nueva_tarea:
   - text: "Y ahora que tarea vas a hacer ?"
   utter_pregunta_por_problemas:

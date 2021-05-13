@@ -2,4 +2,24 @@ version: "2.0"
 
 stories:
 
+- story: preguntar_estado_tarea
+  steps: 
+  - intent: saludar
+  - action: utter_estado_tarea
 
+- story: dev_termino_tarea
+  steps:
+  - intent: termina_tarea
+  - action: utter_enojo_por_tarea
+
+- story: dev_termino_tarea
+  steps:
+  - intent: no_termina_tarea
+  - action: utter_pregunta_por_problemas
+
+- story: dev_acepta_error
+  steps:
+  - intent: acepta_reganio
+  - action: utter_pregunta_por_problemas
+  - intent: error_desarrollo
+  - action: utter_despedir
