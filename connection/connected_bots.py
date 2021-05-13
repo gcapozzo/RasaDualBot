@@ -8,6 +8,12 @@ def send_message(port, message, sender):
     x = requests.post(url, json = data)
 
     print(sender + ": " + x.text)
+    
+    if(x.status_code == 200):
+    	return x.text
+    else
+    	print(x.raw)
+    	return None
 
 # Puertos donde tienen que estar corriendo los dos chatbots
 port_c1 = 5006
