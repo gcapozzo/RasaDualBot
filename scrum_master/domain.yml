@@ -1,31 +1,35 @@
 version: "2.0"
 
 intents:
-  - acepta_reganio
   - saludar
-  - error_desarrollo
-  - preguntan_por_horario
-  - preguntan_por_lugar_evento
+  - explicar_problema
+  - preguntar_por_horario_evento
+  - preguntar_por_lugar_evento
   - termina_tarea
   - no_termina_tarea
   
 entities: 
   - ScrumEvent
+  - stack_proyecto
 
 responses:
   utter_despedir:
   - text: "Chau"
+  utter_recomendar_solucion:
+  - text: "Habla con Pablo"
   utter_estado_tarea:
   - text: "¿Cual es el estado de tu tarea?"
+  utter_fin_sprint:
+  - text: "Quedan 3 dias para el fin del sprint"
   utter_enojo_por_tarea:
   - text: "inutil"
-  utter_pregunta_trabajo_ayer:
+  utter_preguntar_trabajo_ayer:
   - text: "Que tarea hiciste ayer?"
-  utter_pregunta_nueva_tarea:
+  utter_preguntar_nueva_tarea:
   - text: "Y ahora que tarea vas a hacer ?"
-  utter_pregunta_por_problemas:
+  utter_preguntar_por_problemas:
   - text: "Que inconvenientes tuviste ?"
-  utter_pregunta_demora_implementacion_func:
+  utter_preguntar_demora_implementacion_func:
   - text: "Cuanto te vas a tardar en terminar la tarea ?"
   utter_dar_horario_evento:
   - text: "Es a las 13 HS."

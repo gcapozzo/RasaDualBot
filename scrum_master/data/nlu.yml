@@ -1,26 +1,28 @@
 version: "2.0"
 
 nlu:
-- intent: acepta_reganio
+- intent: saludar
+  examples: |
+    - hola
+    - hey
+ 
+- intent: explicar_problema
   examples: |
     - no maneje bien mis tiempos
+    - no tenia conocimientos de [base de datos](stack_proyecto)
+    - tuve que aprender [python](stack_proyecto)
   
-- intent: error desarrollo
+- intent: preguntar_por_horario_evento
   examples: |
-    - no sabia manejar bd
-
-- intent: preguntan_por_horario
-  examples: |
-    - A que hora era el (daily meeting)[ScrumEvent] ?
-    - En que horario es el (retrospective)[ScrumEvent] ?
-    - Me podes decir a que hora es el (sprint retrospective)[ScrumEvent]
+    - A que hora era el (daily meeting)[ScrumEvent]?
+    - Me podes decir a que horario es el (sprint retrospective)[ScrumEvent]
     - Que horario es la (daily)[ScrumEvent] ?
     - Decime la hora del (review)[ScrumEvent] 
     - A que hora es el (sprint review)[ScrumEvent]
     
-- intent: preguntan_por_lugar_evento
+- intent: preguntar_por_lugar_evento
   examples: |
-    - Donde es el (daily)[ScrumEvent] ?
+    - Donde es el (daily)[ScrumEvent]?
     - Donde va a ser el (sprint retrospective)[ScrumEvent] ?
     - Donde hay que ir para hacer el (sprint review)[ScrumEvent] ?
     - En donde sera el (daily meeting)[ScrumEvent] ?

@@ -10,16 +10,11 @@ stories:
 - story: dev_termino_tarea
   steps:
   - intent: termina_tarea
-  - action: utter_enojo_por_tarea
+  - action: utter_fin_sprint
 
-- story: dev_termino_tarea
+- story: dev_no_termino_tarea
   steps:
   - intent: no_termina_tarea
-  - action: utter_pregunta_por_problemas
-
-- story: dev_acepta_error
-  steps:
-  - intent: acepta_reganio
-  - action: utter_pregunta_por_problemas
-  - intent: error_desarrollo
-  - action: utter_despedir
+  - action: utter_preguntar_por_problemas
+  - intent: explicar_problema
+  - action: utter_recomendar_solucion
