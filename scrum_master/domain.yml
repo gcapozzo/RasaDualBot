@@ -7,6 +7,7 @@ intents:
   - preguntar_por_lugar_evento
   - termina_tarea
   - no_termina_tarea
+  - despedir
   
 entities: 
   - ScrumEvent

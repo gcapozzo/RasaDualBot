@@ -5,6 +5,11 @@ nlu:
   examples: |
     - hola
     - hey
+
+- intent: despedir
+  examples: |
+    - chau
+    - adios
  
 - intent: explicar_problema
   examples: |
@@ -14,11 +19,10 @@ nlu:
   
 - intent: preguntar_por_horario_evento
   examples: |
-    - A que hora era el (daily meeting)[ScrumEvent]?
-    - Me podes decir a que horario es el (sprint retrospective)[ScrumEvent]
-    - Que horario es la (daily)[ScrumEvent] ?
-    - Decime la hora del (review)[ScrumEvent] 
-    - A que hora es el (sprint review)[ScrumEvent]
+    - A que hora era el [daily meeting](ScrumEvent)?
+    - Me podes decir a que horario es el [sprint retrospective](ScrumEvent)
+    - Que horario es la [daily](ScrumEvent)?
+    - Decime la hora del [sprint review](ScrumEvent) 
     
 - intent: preguntar_por_lugar_evento
   examples: |
