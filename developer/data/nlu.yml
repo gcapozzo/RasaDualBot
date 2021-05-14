@@ -16,6 +16,7 @@ nlu:
     - con que tarea avanzaste ?
     - estuviste avanzando en tu tarea?
     - que tarea estas haciendo?
+    - cual es el estado de tu tarea
 
 - intent: preguntan_por_inconvenientes 
   examples: |
@@ -41,7 +42,7 @@ nlu:
   examples: |
     - intenta buscando en google
     - habla con
-    - Lee el libro de Phython
+    - Lee el libro de python
     - fijate si Nico te puede dar una mano
     - Pedro te va a poder ayudar
 

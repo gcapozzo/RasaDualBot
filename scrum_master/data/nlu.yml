@@ -22,6 +22,7 @@ nlu:
     - no tenia conocimientos de [base de datos](stack_proyecto)
     - tuve que aprender [python](stack_proyecto)
     - no sabia [json](stack_proyecto)
+    - no puedo entender
   
 - intent: preguntar_por_horario_evento
   examples: |

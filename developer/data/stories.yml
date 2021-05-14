@@ -16,3 +16,9 @@ stories:
   - intent: pregunta_demora
   - action: utter_tiempo_estimado_task
 
+- story: dev_no_termino_tarea
+  steps:
+  - intent: preguntan_por_inconvenientes
+  - action: utter_explicar_problema
+  - intent: dan_solucion
+  - action: utter_aceptar_recomendacion

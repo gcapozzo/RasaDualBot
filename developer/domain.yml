@@ -36,9 +36,11 @@ responses:
   utter_aceptar_recomendacion:
   - text: "Bueno, voy a hacer eso"
   utter_explicar_problema:
-  - text: "No puedo entender phyton" 
+  - text: "No puedo entender python" 
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
+  utter_despedir:
+  - text: ""
 
 session_config:
   session_expiration_time: 60
