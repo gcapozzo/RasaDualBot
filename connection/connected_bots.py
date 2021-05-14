@@ -26,10 +26,10 @@ delay = 0.5
 
 # Mando el mensaje inicial simulando que soy el chatbot 1
 message_c1 = send_message(port_c1, "hola", "Developer")
-message_c2 = "inicio"
+message_c2 = ""
 
 # Loop infinito de los chatbots mandandose mensajes entre si, la conversacion se imprime en consola desde la funcion send_message
-while message_c1 != "" or message_c2 != "":
+while message_c1 != "Chau" and message_c2 != "Chau":
     message_c2 = send_message(port_c2, message_c1, "Scrum Master")
     time.sleep(delay)
     message_c1 = send_message(port_c1, message_c2, "Developer")

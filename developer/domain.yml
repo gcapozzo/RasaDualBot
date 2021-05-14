@@ -40,7 +40,7 @@ responses:
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
   utter_despedir:
-  - text: ""
+  - text: "Chau"
 
 session_config:
   session_expiration_time: 60
