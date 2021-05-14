@@ -39,16 +39,4 @@ stories:
   - action: utter_recomendar_solucion
   - action: utter_fin_sprint
 
-- story: pregunta_por_horario_evento
-  steps:
-  - intent: preguntar_por_horario_evento
-    entities:
-    - scrum_event: "sprint retrospective"
-  - action: utter_dar_horario_evento
 
-- story: pregunta_por_lugar_evento
-  steps:
-  - intent: preguntar_por_lugar_evento
-    entities:
-    - scrum_event: "sprint retrospective"
-  - action: utter_dar_ubicacion_evento
