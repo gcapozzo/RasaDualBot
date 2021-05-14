@@ -10,26 +10,35 @@ intents:
   - despedir
   
 entities: 
-  - ScrumEvent
+  - scrum_event
   - stack_proyecto
+  - tarea
+
+slots:
+  tarea:
+    type: text
+  stack_proyecto: 
+    type: text
+  scrum_event:
+    type: text
 
 responses:
   utter_despedir:
   - text: "Chau"
   utter_recomendar_solucion:
-  - text: "Habla con Pablo"
+  - text: "Habla con Pablo que sabe de {stack_proyecto}"
   utter_estado_tarea:
   - text: "¿Cual es el estado de tu tarea?"
-  utter_fin_sprint:
-  - text: "Quedan 3 dias para el fin del sprint"
-  utter_enojo_por_tarea:
-  - text: "inutil"
   utter_preguntar_trabajo_ayer:
   - text: "Que tarea hiciste ayer?"
   utter_preguntar_nueva_tarea:
   - text: "Y ahora que tarea vas a hacer ?"
   utter_preguntar_por_problemas:
-  - text: "Que inconvenientes tuviste ?"
+  - text: "Que inconvenientes tuviste con la {tarea}?"
+  utter_fin_sprint:
+  - text: "Quedan 3 dias para el fin del sprint"
+  utter_dias_para_event:
+  - text: "El {scrum_event} es en 5 dias"
   utter_preguntar_demora_implementacion_func:
   - text: "Cuanto te vas a tardar en terminar la tarea ?"
   utter_dar_horario_evento:

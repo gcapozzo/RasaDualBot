@@ -1,6 +1,11 @@
 version: "2.0"
 
 nlu:
+
+- regex: tarea
+  examples: |
+    - task [0-9]*
+
 - intent: saludar
   examples: |
     - hola
@@ -16,42 +21,34 @@ nlu:
     - no maneje bien mis tiempos
     - no tenia conocimientos de [base de datos](stack_proyecto)
     - tuve que aprender [python](stack_proyecto)
+    - no sabia [json](stack_proyecto)
   
 - intent: preguntar_por_horario_evento
   examples: |
-    - A que hora era el [daily meeting](ScrumEvent)?
-    - Me podes decir a que horario es el [sprint retrospective](ScrumEvent)
-    - Que horario es la [daily](ScrumEvent)?
-    - Decime la hora del [sprint review](ScrumEvent) 
+    - A que hora era el [daily meeting](scrum_event)?
+    - Me podes decir a que horario es el [sprint retrospective](scrum_event)
+    - Que horario es la [daily_meeting](scrum_event)?
+    - Decime la hora del [sprint review](scrum_event) 
     
 - intent: preguntar_por_lugar_evento
   examples: |
-    - Donde es el (daily)[ScrumEvent]?
-    - Donde va a ser el (sprint retrospective)[ScrumEvent] ?
-    - Donde hay que ir para hacer el (sprint review)[ScrumEvent] ?
-    - En donde sera el (daily meeting)[ScrumEvent] ?
-    - En donde es el (retrospective)[ScrumEvent] ?
-    - A cual ubicacion hay que ir para asistir al (review)[ScrumEvent] ?
-    - En donde queda el (daily meeting)[ScrumEvent] ?
+    - donde es el [daily meeting](scrum_event)?
+    - en que lugar se va a hacer el [sprint retrospective](scrum_event)?
+    - decime la ubicacion del [sprint review](scrum_event)?
     
 - intent: termina_tarea
   examples: |
-    - Termine mi task
-    - Pude terminar mi trabajo
-    - Logre terminar mi tarea
-    - Por fin termine mi tarea
-    - Ya pude finalizar mi task
-    - Mi trabajo ya esta terminado
-    - Mi task esta done
+    - termine mi [task 1](tarea)
+    - finalice mi trabajo con la [task 1](tarea)
+    - conclui la [task 1](tarea)
+    - mi trabajo con [task 1](tarea) ya esta terminado
+    - mi [task 1](tarea) esta done
 
 - intent: no_termina_tarea
   examples: |
-    - No pude terminar mi task
-    - No termine la tarea
-    - No consegui realizar el trabajo
-    - El trabajo no lo pude terminar
-    - Desgraciadamente no pude terminar la tarea
-    - No, no pude terminar
+    - tuve problemas con la [task 1](tarea)
+    - se me complico con [task 1](tarea)
+    - me retrase con [task 1](tarea)
 
     
     

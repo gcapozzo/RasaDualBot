@@ -7,14 +7,38 @@ stories:
   - intent: saludar
   - action: utter_estado_tarea
 
+- story: preguntar_sobre_eventos
+  steps: 
+  - intent: saludar
+  - action: utter_dudas_eventos
+
 - story: dev_termino_tarea
   steps:
   - intent: termina_tarea
-  - action: utter_fin_sprint
+  - action: 
 
 - story: dev_no_termino_tarea
   steps:
   - intent: no_termina_tarea
+    entities:
+    - tarea: task 5
   - action: utter_preguntar_por_problemas
   - intent: explicar_problema
+      entities:
+    - stack_proyecto: python
   - action: utter_recomendar_solucion
+  - action: utter_fin_sprint
+
+- story: pregunta_por_horario_evento
+  steps:
+  - intent: preguntar_por_horario_evento
+      entities:
+    - scrum_event: "sprint retrospective"
+  - action: utter_dar_horario_evento
+
+- story: pregunta_por_lugar_evento
+  steps:
+  - intent: preguntar_por_lugar_evento
+      entities:
+    - scrum_event: "sprint retrospective"
+  - action: utter_dar_ubicacion_evento
