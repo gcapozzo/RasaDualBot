@@ -18,6 +18,10 @@ actions:
 responses:
   utter_saludar:
   - text: "Hola"
+  utter_termine_tarea:
+  - text: "Ya termine la {tarea_actual}"
+  utter_termine_tarea:
+  - text: "No pude terminar la {tarea_actual}"
   utter_aceptar_error:
   - text: "No maneje bien mis tiempos"
   utter_iamabot:

@@ -12,6 +12,7 @@ from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 
+tarea = "task 1"
 
 class action_estado_tarea_actual(Action):
 
@@ -22,8 +23,8 @@ class action_estado_tarea_actual(Action):
              tracker: Tracker,
              domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
              
-         dispatcher.utter_message("utter_tarea_no_terminada")
-#         dispatcher.utter_message("utter_tarea_terminada")
+         dispatcher.utter_message(response = "utter_tarea_no_terminada", tarea_actual = tarea)
+#         dispatcher.utter_message(response = "utter_tarea_terminada", tarea_actual = tarea)
 
          return []
 
