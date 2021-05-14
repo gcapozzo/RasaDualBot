@@ -37,6 +37,7 @@ responses:
   utter_dar_ubicacion_evento:
   - text: "Es en la sala de reuniones, como siempre"
 
+
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true

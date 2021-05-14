@@ -37,6 +37,14 @@ nlu:
     - ahora que tarea vas a hacer ?
     - que vas a empezar hoy ?
 
+- intent: dan_solucion
+  examples: |
+    - intenta buscando en google
+    - habla con
+    - Lee el libro de Phython
+    - fijate si Nico te puede dar una mano
+    - Pedro te va a poder ayudar
+
 - intent: reconocer_horario
   examples: |
     - son las
