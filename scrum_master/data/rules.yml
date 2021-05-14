@@ -12,7 +12,7 @@ rules:
   - intent: preguntar_por_horario_evento
     entities:
     - scrum_event: "sprint retrospective"
-  - action: utter_dar_horario_evento
+  - action: action_get_hora_event
 
 - rule: pregunta_por_lugar_evento
   steps:

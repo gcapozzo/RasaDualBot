@@ -12,7 +12,7 @@ from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import SlotSet
 
-class ActionHelloWorld(Action):
+class ActionSetDiasSprint(Action):
 
     def name(self) -> Text:
         return "action_set_dias_sprint"
@@ -21,6 +21,23 @@ class ActionHelloWorld(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         
-        dias_restantes = 8.0
+        dias_restantes = 3.0
 
         return [SlotSet("dias_restantes_sprint",dias_restantes)]
+
+class ActionGetHoraEvent(Action):
+
+    def name(self) -> Text:
+        return "action_get_hora_event"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        remaining_days = {
+            "sprint retrospective" : "14:00",
+            "sprint review": "10:00"
+        }
+        dias_restantes=remaining_days.get(tracker.get_slot("scrum_event"))
+        dispatcher.utter_message(response="utter_hora_del_event",dias=dias_restantes)
+        return []
+

@@ -9,11 +9,6 @@ stories:
   - action: utter_estado_tarea
   - checkpoint: check_estado_tarea
 
-#- story: preguntar_sobre_eventos
-#  steps: 
-#  - intent: saludar
-#  - action: utter_dudas_eventos
-
 - story: dev_termino_tarea
   steps:
     - checkpoint: check_estado_tarea
@@ -42,7 +37,6 @@ stories:
     entities:
     - stack_proyecto: python
   - action: utter_recomendar_solucion
-  - action: utter_fin_sprint
 
 - story: dev_no_termino_tarea_muchos_dias
   steps:
@@ -59,4 +53,3 @@ stories:
     entities:
     - stack_proyecto: python
   - action: utter_recomendar_solucion
-  - action: utter_fin_sprint
