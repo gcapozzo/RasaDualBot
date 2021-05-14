@@ -8,6 +8,7 @@ intents:
   - detectar_enojo
   - reconocer_horario
   - saludar
+  - dan_solucion
 
 actions:
   - action_inconveniente
@@ -15,15 +16,27 @@ actions:
   - action_nueva_tarea
   - action_estado_tarea_actual
 
+slots:
+  tarea_actual:
+    type: text
+
 responses:
   utter_saludar:
   - text: "Hola"
   utter_termine_tarea:
   - text: "Ya termine la {tarea_actual}"
-  utter_termine_tarea:
+  utter_no_termine_tarea:
   - text: "No pude terminar la {tarea_actual}"
   utter_aceptar_error:
   - text: "No maneje bien mis tiempos"
+  utter_nueva_tarea:
+  - text: "Estoy por arrancar la task 10"
+  utter_tiempo_estimado_task:
+  - text: "En 5 dias llego a terminarla"
+  utter_aceptar_recomendacion:
+  - text: "Bueno, voy a hacer eso"
+  utter_explicar_problema:
+  - text: "No puedo entender phyton" 
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
 
