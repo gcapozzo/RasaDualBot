@@ -8,6 +8,7 @@ intents:
   - termina_tarea
   - no_termina_tarea
   - despedir
+  - explica_nueva_tarea
   
 entities: 
   - scrum_event

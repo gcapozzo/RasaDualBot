@@ -6,19 +6,29 @@ stories:
   steps: 
   - intent: saludar
   - action: utter_estado_tarea
+  - checkpoint: check_estado_tarea
 
 #- story: preguntar_sobre_eventos
 #  steps: 
 #  - intent: saludar
 #  - action: utter_dudas_eventos
 
-#- story: dev_termino_tarea
-# steps:
-# - intent: termina_tarea
-# - action: utter_
+- story: dev_termino_tarea
+  steps:
+    - checkpoint: check_estado_tarea
+    - intent: termina_tarea
+      entities:
+      - tarea: task 5
+    - action: utter_preguntar_nueva_tarea
+    - intent: explica_nueva_tarea
+      entities:
+      - tarea: task 5
+    - action: utter_fin_sprint
+    - action: utter_despedir
 
 - story: dev_no_termino_tarea
   steps:
+  - checkpoint: check_estado_tarea
   - intent: no_termina_tarea
     entities:
     - tarea: task 5
