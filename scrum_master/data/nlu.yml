@@ -59,6 +59,17 @@ nlu:
     - me toca implementar la [task 1](tarea)
     - tengo que hacer la [task 1](tarea)
 
+- intent: disculpa_por_demora
+  examples: |
+    - perdon por el retraso
+    - disculpas por no terminar 
+
+- intent: afirmar
+  examples: |
+    - si 
+    - claro
+    - dale
+
     
     
 

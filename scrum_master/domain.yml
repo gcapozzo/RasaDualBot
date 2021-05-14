@@ -9,6 +9,8 @@ intents:
   - no_termina_tarea
   - despedir
   - explica_nueva_tarea
+  - disculpa_por_demora
+  - afirmar
   
 entities: 
   - scrum_event
@@ -22,6 +24,14 @@ slots:
     type: text
   scrum_event:
     type: text
+  dias_restantes_sprint:
+    type: float
+    min_value: 1.0
+    max_value: 14.0
+    influence_conversation: true
+
+actions:
+  - action_set_dias_sprint
 
 responses:
   utter_despedir:
@@ -37,7 +47,9 @@ responses:
   utter_preguntar_por_problemas:
   - text: "Que inconvenientes tuviste con la {tarea}?"
   utter_fin_sprint:
-  - text: "Quedan 3 dias para el fin del sprint"
+  - text: "Quedan {dias_restantes_sprint} dias para el fin del sprint"
+  utter_tranquilizar:
+  - text: "No pasa nada, queda {dias_restantes_sprint} dias para el final del sprint, igual intenta adelantar"
   utter_dias_para_event:
   - text: "El {scrum_event} es en 5 dias"
   utter_preguntar_demora_implementacion_func:

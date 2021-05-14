@@ -5,6 +5,7 @@ stories:
 - story: preguntar_estado_tarea
   steps: 
   - intent: saludar
+  - action: action_set_dias_sprint
   - action: utter_estado_tarea
   - checkpoint: check_estado_tarea
 
@@ -26,12 +27,16 @@ stories:
     - action: utter_fin_sprint
     - action: utter_despedir
 
-- story: dev_no_termino_tarea
+- story: dev_no_termino_tarea_pocos_dias
   steps:
   - checkpoint: check_estado_tarea
   - intent: no_termina_tarea
     entities:
     - tarea: task 5
+  - slot_was_set:
+    - dias_restantes_sprint: 2.0
+  - action: utter_fin_sprint
+  - intent: disculpa_por_demora
   - action: utter_preguntar_por_problemas
   - intent: explicar_problema
     entities:
@@ -39,4 +44,19 @@ stories:
   - action: utter_recomendar_solucion
   - action: utter_fin_sprint
 
-
+- story: dev_no_termino_tarea_muchos_dias
+  steps:
+  - checkpoint: check_estado_tarea
+  - intent: no_termina_tarea
+    entities:
+    - tarea: task 5
+  - slot_was_set:
+    - dias_restantes_sprint: 13.0
+  - action: utter_tranquilizar
+  - intent: afirmar
+  - action: utter_preguntar_por_problemas
+  - intent: explicar_problema
+    entities:
+    - stack_proyecto: python
+  - action: utter_recomendar_solucion
+  - action: utter_fin_sprint
