@@ -40,7 +40,7 @@ responses:
   utter_aceptar_error:
   - text: "no maneje bien mis tiempos"
   utter_nueva_tarea:
-  - text: "estoy por arrancar la task 10"
+  - text: "voy a arrancar con la task 9"
   utter_aceptar_recomendacion:
   - text: "bueno, voy a hacer eso"
   utter_explicar_problema:

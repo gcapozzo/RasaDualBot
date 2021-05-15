@@ -39,7 +39,7 @@ nlu:
     
 - intent: explica_nueva_tarea
   examples: |
-    - voy a arrancar con la [task 1](tarea)
+    - voy a arrancar con la
     - ahora voy a hacer la [task 1](tarea)
     - elegi la [task 1](tarea) para hacer
     - me toca implementar la [task 1](tarea)

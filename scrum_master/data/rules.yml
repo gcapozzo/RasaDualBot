@@ -1,22 +1,2 @@
 version: "2.0"
 
-rules:
-
-- rule: despedir en cualquier momento
-  steps:
-  - intent: despedir
-  - action: utter_despedir
-
-- rule: pregunta_por_horario_evento
-  steps:
-  - intent: preguntar_por_horario_evento
-    entities:
-    - scrum_event: "sprint retrospective"
-  - action: action_get_hora_event
-
-- rule: pregunta_por_lugar_evento
-  steps:
-  - intent: preguntar_por_lugar_evento
-    entities:
-    - scrum_event: "sprint retrospective"
-  - action: utter_dar_ubicacion_evento

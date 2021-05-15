@@ -7,10 +7,17 @@ def send_message(port, message, sender):
 
     x = requests.post(url, json = data)
 
-    print(sender + ": " + x.text)
-    
+    if sender=="Developer":
+        aux=x.text.replace("[{\"recipient_id\":\"Developer\",\"text\":\"", "")
+        aux=aux.replace("\"}]", "")
+    else:
+        aux=x.text.replace("[{\"recipient_id\":\"ScrumMaster\",\"text\":\"", "")
+        aux=aux.replace("\"}]", "")
+        
+    print(sender + ": " + aux)
+ 
     if(x.status_code == 200):
-    	return x.text
+    	return aux
     else:
     	print(x.raw)
     	return None

@@ -7,7 +7,7 @@ nlu:
 
 - regex: dias_restante_sprint
   examples: |
-    - [1]?[0-9]{1}.0
+    - [1]?[0-9]{1}\.0
 
 - intent: preguntan_por_tarea
   examples: |

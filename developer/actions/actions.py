@@ -23,7 +23,7 @@ class action_estado_tarea_actual(Action):
              tracker: Tracker,
              domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
              
-         dispatcher.utter_message(response = "utter_no_termine_tarea", tarea_actual = tarea)
-#         dispatcher.utter_message(response = "utter_tarea_terminada", tarea_actual = tarea)
+#         dispatcher.utter_message(response = "utter_no_termine_tarea", tarea_actual = tarea)
+         dispatcher.utter_message(response = "utter_termine_tarea", tarea_actual = tarea)
 
          return []
