@@ -1,14 +1,5 @@
 version: "2.0"
-
 nlu:
-- regex: horario
-  examples: |
-    - ^([01]?[0-9]|2[0-3]):[0-5][0-9]$
-
-- regex: dias_restante_sprint
-  examples: |
-    - [1]?[0-9]{1}\.0
-
 - intent: preguntan_por_tarea
   examples: |
     - que tarea hiciste ?
@@ -16,20 +7,18 @@ nlu:
     - estuviste avanzando en tu tarea?
     - que tarea estas haciendo?
     - cual es el estado de tu tarea
-
-- intent: preguntan_por_inconvenientes 
+- intent: preguntan_por_inconvenientes
   examples: |
-    - que problema tenes ? 
+    - que problema tenes ?
     - que inconveniente tuviste ?
     - te encontraste alguna dificultad ?
     - estas teniendo algun problema ?
-
+    - que inconvenientes tuviste ?
 - intent: pregunta_tarea_nueva
   examples: |
-    - cual tarea vas a empezar ? 
+    - cual tarea vas a empezar ?
     - ahora que tarea vas a hacer ?
     - que vas a empezar hoy ?
-
 - intent: dan_solucion
   examples: |
     - intenta buscando en google
@@ -37,19 +26,24 @@ nlu:
     - Lee el libro de python
     - fijate si Nico te puede dar una mano
     - Pedro te va a poder ayudar
-
+    - habla con pablo que sabe de python
 - intent: reconocer_dias
   examples: |
     - quedan [5.0](dias_restantes_sprint) para el fin del sprint
     - todavia quedan [4.0](dias_restantes_sprint)
     - faltan [3.0](dias_restantes_sprint)
-
+    - no pasa nada, queda [10](dias_restantes_sprint) dias para el final del sprint, igual intenta adelantar
 - intent: saludar
   examples: |
     - hola
     - hey
-
 - intent: despedir
   examples: |
     - chau
     - adios
+- regex: dias_restante_sprint
+  examples: |
+    - [1]?[0-9]{1}\.0
+- regex: horario
+  examples: |
+    - ^([01]?[0-9]|2[0-3]):[0-5][0-9]$

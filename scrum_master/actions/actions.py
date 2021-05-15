@@ -21,7 +21,7 @@ class ActionSetDiasSprint(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         
-        dias_restantes = 3.0
+        dias_restantes = 10.0
 
         return [SlotSet("dias_restantes_sprint",dias_restantes)]
 

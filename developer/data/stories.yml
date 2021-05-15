@@ -22,8 +22,10 @@ stories:
   steps:
   - checkpoint: check_estado_tarea
   - intent: reconocer_dias
+    entities:
+    - dias_restantes_sprint: '2'
   - slot_was_set:
-    - dias_restantes_sprint: 2.0
+    - dias_restantes_sprint: '2'
   - action: utter_disculpa
   - intent: preguntan_por_inconvenientes
   - action: utter_explicar_problema
@@ -31,12 +33,17 @@ stories:
   - action: utter_aceptar_recomendacion
   - action: utter_despedir
 
-- story: dev_no_termino_tarea_mucho_tiempo
+- story: interactive_story_1
   steps:
-  - checkpoint: check_estado_tarea
+  - intent: saludar
+  - action: utter_saludar
+  - intent: preguntan_por_tarea
+  - action: action_estado_tarea_actual
   - intent: reconocer_dias
+    entities:
+    - dias_restantes_sprint: '10'
   - slot_was_set:
-    - dias_restantes_sprint: 13.0
+    - dias_restantes_sprint: '10'
   - action: utter_afirmar
   - intent: preguntan_por_inconvenientes
   - action: utter_explicar_problema

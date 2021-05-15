@@ -1,58 +1,57 @@
-version: "2.0"
-
-intents:
-  - preguntan_por_tarea
-  - preguntan_por_inconvenientes
-  - pregunta_demora
-  - pregunta_tarea_nueva
-  - detectar_enojo
-  - reconocer_horario
-  - saludar
-  - dan_solucion
-  - reconocer_dias
-  - despedir
-
-actions:
-  - action_inconveniente
-  - action_confirmar_asistencia
-  - action_nueva_tarea
-  - action_estado_tarea_actual
-
-entities:
-  - dias_restantes_sprint
-
-slots:
-  tarea_actual:
-    type: text
-  dias_restantes_sprint:
-    type: float
-    min_value: 1.0
-    max_value: 14.0
-    influence_conversation: true  
-
-responses:
-  utter_saludar:
-  - text: "hola"
-  utter_termine_tarea:
-  - text: "ya termine la {tarea_actual}"
-  utter_no_termine_tarea:
-  - text: "tuve problemas con la {tarea_actual}"
-  utter_aceptar_error:
-  - text: "no maneje bien mis tiempos"
-  utter_nueva_tarea:
-  - text: "voy a arrancar con la task 9"
-  utter_aceptar_recomendacion:
-  - text: "bueno, voy a hacer eso"
-  utter_explicar_problema:
-  - text: "no puedo entender python" 
-  utter_despedir:
-  - text: "chau"
-  utter_afirmar:
-  - text: "dale"
-  utter_disculpa:
-  - text: "perdon por el retraso"
-
-
+version: '2.0'
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
+intents:
+- preguntan_por_inconvenientes
+- saludar
+- preguntan_por_tarea
+- reconocer_dias
+- dan_solucion
+- pregunta_demora
+- pregunta_tarea_nueva
+- detectar_enojo
+- reconocer_horario
+- despedir
+entities:
+- dias_restantes_sprint
+slots:
+  tarea_actual:
+    type: text
+    influence_conversation: true
+  dias_restantes_sprint:
+    type: float
+    influence_conversation: true
+    max_value: 14.0
+    min_value: 1.0
+responses:
+  utter_saludar:
+  - text: hola
+  utter_termine_tarea:
+  - text: ya termine la {tarea_actual}
+  utter_no_termine_tarea:
+  - text: tuve problemas con la {tarea_actual}
+  utter_aceptar_error:
+  - text: no maneje bien mis tiempos
+  utter_nueva_tarea:
+  - text: voy a arrancar con la task 9
+  utter_aceptar_recomendacion:
+  - text: bueno, voy a hacer eso
+  utter_explicar_problema:
+  - text: no puedo entender python
+  utter_despedir:
+  - text: chau
+  utter_afirmar:
+  - text: dale
+  utter_disculpa:
+  - text: perdon por el retraso
+actions:
+- action_confirmar_asistencia
+- action_estado_tarea_actual
+- action_inconveniente
+- action_nueva_tarea
+- utter_aceptar_recomendacion
+- utter_afirmar
+- utter_despedir
+- utter_explicar_problema
+- utter_saludar
