@@ -39,27 +39,27 @@ actions:
 
 responses:
   utter_despedir:
-  - text: "Chau"
+  - text: "chau"
   utter_recomendar_solucion:
-  - text: "Habla con Pablo que sabe de {stack_proyecto}"
+  - text: "habla con Pablo que sabe de {stack_proyecto}"
   utter_estado_tarea:
-  - text: "Cual es el estado de tu tarea?"
+  - text: "cual es el estado de tu tarea?"
   utter_preguntar_trabajo_ayer:
-  - text: "Que tarea hiciste ayer?"
+  - text: "que tarea hiciste ayer?"
   utter_preguntar_nueva_tarea:
-  - text: "Y ahora que tarea vas a hacer ?"
+  - text: "y ahora que tarea vas a hacer ?"
   utter_preguntar_por_problemas:
-  - text: "Que inconvenientes tuviste ?"
+  - text: "que inconvenientes tuviste ?"
   utter_fin_sprint:
-  - text: "Quedan {dias_restantes_sprint} dias para el fin del sprint"
+  - text: "quedan {dias_restantes_sprint} dias para el fin del sprint"
   utter_tranquilizar:
-  - text: "No pasa nada, queda {dias_restantes_sprint} dias para el final del sprint, igual intenta adelantar"
+  - text: "no pasa nada, queda {dias_restantes_sprint} dias para el final del sprint, igual intenta adelantar"
   utter_hora_del_event:
-  - text: "El {scrum_event} es a las {dias} horas"
+  - text: "el {scrum_event} es a las {dias} horas"
   utter_preguntar_demora_implementacion_func:
-  - text: "Cuanto te vas a tardar en terminar la tarea ?"
+  - text: "cuanto te vas a tardar en terminar la tarea ?"
   utter_dar_ubicacion_evento:
-  - text: "Es en la sala de reuniones, como siempre"
+  - text: "es en la sala de reuniones, como siempre"
 
 
 session_config:

@@ -32,25 +32,21 @@ slots:
 
 responses:
   utter_saludar:
-  - text: "Hola"
+  - text: "hola"
   utter_termine_tarea:
-  - text: "Ya termine la {tarea_actual}"
+  - text: "ya termine la {tarea_actual}"
   utter_no_termine_tarea:
   - text: "tuve problemas con la {tarea_actual}"
   utter_aceptar_error:
-  - text: "No maneje bien mis tiempos"
+  - text: "no maneje bien mis tiempos"
   utter_nueva_tarea:
-  - text: "Estoy por arrancar la task 10"
-  utter_tiempo_estimado_task:
-  - text: "En 5 dias llego a terminarla"
+  - text: "estoy por arrancar la task 10"
   utter_aceptar_recomendacion:
-  - text: "Bueno, voy a hacer eso"
+  - text: "bueno, voy a hacer eso"
   utter_explicar_problema:
-  - text: "No puedo entender python" 
-  utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+  - text: "no puedo entender python" 
   utter_despedir:
-  - text: "Chau"
+  - text: "chau"
   utter_afirmar:
   - text: "dale"
   utter_disculpa:

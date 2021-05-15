@@ -22,7 +22,7 @@ stories:
   steps:
   - checkpoint: check_estado_tarea
   - intent: reconocer_dias
-    entities:
+  - slot_was_set:
     - dias_restantes_sprint: 2.0
   - action: utter_disculpa
   - intent: preguntan_por_inconvenientes
@@ -35,7 +35,7 @@ stories:
   steps:
   - checkpoint: check_estado_tarea
   - intent: reconocer_dias
-    entities:
+  - slot_was_set:
     - dias_restantes_sprint: 13.0
   - action: utter_afirmar
   - intent: preguntan_por_inconvenientes

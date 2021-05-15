@@ -9,11 +9,6 @@ nlu:
   examples: |
     - [1]?[0-9]{1}.0
 
-- intent: detectar_enojo
-  examples: |
-    - inutil
-    - tonto
-
 - intent: preguntan_por_tarea
   examples: |
     - que tarea hiciste ?
@@ -28,13 +23,6 @@ nlu:
     - que inconveniente tuviste ?
     - te encontraste alguna dificultad ?
     - estas teniendo algun problema ?
-
-- intent: pregunta_demora
-  examples: |
-    - cuanto vas a tardar en terminar ?
-    - cuanto te demora terminar la tarea ?
-    - te falta mucho para terminar la tarea ?
-    - cuanto tiempo demoras con la tarea ?
 
 - intent: pregunta_tarea_nueva
   examples: |

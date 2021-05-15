@@ -23,20 +23,6 @@ nlu:
     - tuve que aprender [python](stack_proyecto)
     - no sabia [json](stack_proyecto)
     - no puedo entender
-  
-- intent: preguntar_por_horario_evento
-  examples: |
-    - A que hora era el [daily meeting](scrum_event)?
-    - Me podes decir a que horario es el [sprint retrospective](scrum_event)
-    - Que horario es la [daily_meeting](scrum_event)?
-    - Decime la hora del [sprint review](scrum_event) 
-    
-- intent: preguntar_por_lugar_evento
-  examples: |
-    - donde es el [daily meeting](scrum_event)?
-    - en que lugar se va a hacer el [sprint retrospective](scrum_event)?
-    - decime la ubicacion del [sprint review](scrum_event)?
-    
 - intent: termina_tarea
   examples: |
     - termine mi [task 1](tarea)
@@ -49,7 +35,6 @@ nlu:
   examples: |
     - tuve problemas con la [task 1](tarea)
     - se me complico con [task 1](tarea)
-    - no pude terminar la [task 1](tarea)
     - me retrase con [task 1](tarea)
     
 - intent: explica_nueva_tarea
@@ -67,7 +52,7 @@ nlu:
 
 - intent: afirmar
   examples: |
-    - si 
+    - sisisi 
     - claro
     - dale
 

@@ -29,8 +29,8 @@ message_c1 = send_message(port_c1, "hola", "Developer")
 message_c2 = ""
 
 # Loop infinito de los chatbots mandandose mensajes entre si, la conversacion se imprime en consola desde la funcion send_message
-while message_c1.find("Chau") == -1:
-    message_c2 = send_message(port_c2, message_c1, "Scrum Master")
+while message_c1.find("chau") == -1:
+    message_c2 = send_message(port_c2, message_c1, "ScrumMaster")
     time.sleep(delay)
     message_c1 = send_message(port_c1, message_c2, "Developer")
     time.sleep(delay)
