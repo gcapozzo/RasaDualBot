@@ -2,23 +2,44 @@ version: "2.0"
 
 stories:
 
-- story: tarea_terminada
+- story: estado_tarea
   steps: 
   - intent: saludar
   - action: utter_saludar 
   - intent: preguntan_por_tarea
   - action: action_estado_tarea_actual
+  - checkpoint: check_estado_tarea
 
-- story: scrum_master_satisfecho
+- story: dev_tarea_terminada
   steps:
+  - checkpoint: check_estado_tarea
   - intent: pregunta_tarea_nueva
   - action: utter_nueva_tarea
-  - intent: pregunta_demora
-  - action: utter_tiempo_estimado_task
+  - intent: despedir
+  - action: utter_despedir
 
-- story: dev_no_termino_tarea
+- story: dev_no_termino_tarea_poco_tiempo
   steps:
+  - checkpoint: check_estado_tarea
+  - intent: reconocer_dias
+    entities:
+    - dias_restantes_sprint: 2.0
+  - action: utter_disculpa
   - intent: preguntan_por_inconvenientes
   - action: utter_explicar_problema
   - intent: dan_solucion
   - action: utter_aceptar_recomendacion
+  - action: utter_despedir
+
+- story: dev_no_termino_tarea_mucho_tiempo
+  steps:
+  - checkpoint: check_estado_tarea
+  - intent: reconocer_dias
+    entities:
+    - dias_restantes_sprint: 13.0
+  - action: utter_afirmar
+  - intent: preguntan_por_inconvenientes
+  - action: utter_explicar_problema
+  - intent: dan_solucion
+  - action: utter_aceptar_recomendacion
+  - action: utter_despedir

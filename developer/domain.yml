@@ -9,6 +9,8 @@ intents:
   - reconocer_horario
   - saludar
   - dan_solucion
+  - reconocer_dias
+  - despedir
 
 actions:
   - action_inconveniente
@@ -16,9 +18,17 @@ actions:
   - action_nueva_tarea
   - action_estado_tarea_actual
 
+entities:
+  - dias_restantes_sprint
+
 slots:
   tarea_actual:
     type: text
+  dias_restantes_sprint:
+    type: float
+    min_value: 1.0
+    max_value: 14.0
+    influence_conversation: true  
 
 responses:
   utter_saludar:
@@ -26,7 +36,7 @@ responses:
   utter_termine_tarea:
   - text: "Ya termine la {tarea_actual}"
   utter_no_termine_tarea:
-  - text: "No pude terminar la {tarea_actual}"
+  - text: "tuve problemas con la {tarea_actual}"
   utter_aceptar_error:
   - text: "No maneje bien mis tiempos"
   utter_nueva_tarea:
@@ -41,6 +51,11 @@ responses:
   - text: "I am a bot, powered by Rasa."
   utter_despedir:
   - text: "Chau"
+  utter_afirmar:
+  - text: "dale"
+  utter_disculpa:
+  - text: "perdon por el retraso"
+
 
 session_config:
   session_expiration_time: 60

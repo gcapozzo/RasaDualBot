@@ -49,6 +49,7 @@ nlu:
   examples: |
     - tuve problemas con la [task 1](tarea)
     - se me complico con [task 1](tarea)
+    - no pude terminar la [task 1](tarea)
     - me retrase con [task 1](tarea)
     
 - intent: explica_nueva_tarea

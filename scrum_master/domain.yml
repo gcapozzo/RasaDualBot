@@ -43,13 +43,13 @@ responses:
   utter_recomendar_solucion:
   - text: "Habla con Pablo que sabe de {stack_proyecto}"
   utter_estado_tarea:
-  - text: "¿Cual es el estado de tu tarea?"
+  - text: "Cual es el estado de tu tarea?"
   utter_preguntar_trabajo_ayer:
   - text: "Que tarea hiciste ayer?"
   utter_preguntar_nueva_tarea:
   - text: "Y ahora que tarea vas a hacer ?"
   utter_preguntar_por_problemas:
-  - text: "Que inconvenientes tuviste con la {tarea}?"
+  - text: "Que inconvenientes tuviste ?"
   utter_fin_sprint:
   - text: "Quedan {dias_restantes_sprint} dias para el fin del sprint"
   utter_tranquilizar:

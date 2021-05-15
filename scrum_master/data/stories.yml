@@ -11,16 +11,15 @@ stories:
 
 - story: dev_termino_tarea
   steps:
-    - checkpoint: check_estado_tarea
-    - intent: termina_tarea
-      entities:
-      - tarea: task 5
-    - action: utter_preguntar_nueva_tarea
-    - intent: explica_nueva_tarea
-      entities:
-      - tarea: task 5
-    - action: utter_fin_sprint
-    - action: utter_despedir
+  - checkpoint: check_estado_tarea
+  - intent: termina_tarea
+    entities:
+    - tarea: task 5
+  - action: utter_preguntar_nueva_tarea
+  - intent: explica_nueva_tarea
+    entities:
+    - tarea: task 5
+  - action: utter_despedir
 
 - story: dev_no_termino_tarea_pocos_dias
   steps:

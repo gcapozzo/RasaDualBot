@@ -5,6 +5,10 @@ nlu:
   examples: |
     - ^([01]?[0-9]|2[0-3]):[0-5][0-9]$
 
+- regex: dias_restante_sprint
+  examples: |
+    - [1]?[0-9]{1}.0
+
 - intent: detectar_enojo
   examples: |
     - inutil
@@ -21,7 +25,7 @@ nlu:
 - intent: preguntan_por_inconvenientes 
   examples: |
     - que problema tenes ? 
-    - que inconveniente tenes?
+    - que inconveniente tuviste ?
     - te encontraste alguna dificultad ?
     - estas teniendo algun problema ?
 
@@ -46,12 +50,18 @@ nlu:
     - fijate si Nico te puede dar una mano
     - Pedro te va a poder ayudar
 
-- intent: reconocer_horario
+- intent: reconocer_dias
   examples: |
-    - son las
-    - es a las
+    - quedan [5.0](dias_restantes_sprint) para el fin del sprint
+    - todavia quedan [4.0](dias_restantes_sprint)
+    - faltan [3.0](dias_restantes_sprint)
 
 - intent: saludar
   examples: |
     - hola
     - hey
+
+- intent: despedir
+  examples: |
+    - chau
+    - adios

@@ -22,14 +22,14 @@ port_c1 = 5006
 port_c2 = 5005
 
 # Tiempo de espera entre mensaje y mensaje para que no vaya a las chapas (en segundos)
-delay = 0.5
+delay = 1.0
 
 # Mando el mensaje inicial simulando que soy el chatbot 1
 message_c1 = send_message(port_c1, "hola", "Developer")
 message_c2 = ""
 
 # Loop infinito de los chatbots mandandose mensajes entre si, la conversacion se imprime en consola desde la funcion send_message
-while message_c1 != "Chau" and message_c2 != "Chau":
+while message_c1.find("Chau") == -1:
     message_c2 = send_message(port_c2, message_c1, "Scrum Master")
     time.sleep(delay)
     message_c1 = send_message(port_c1, message_c2, "Developer")
